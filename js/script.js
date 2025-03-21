@@ -7,5 +7,7 @@ function search(){
         document.getElementById("company").innerHTML = user.company;
         document.getElementById("avatar_url").innerHTML = `<img id="avatar_url" src=${user.avatar_url} width="110"
         height="110" class="shadow rounded">`
+    }).fail( () => {
+        document.getElementById("error").innerHTML = `<div class="alert alert-danger" role="aler">Não encontrado</div>`;
     });
 }
